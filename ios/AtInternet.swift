@@ -496,9 +496,9 @@ class AtInternet: RCTEventEmitter, TrackerDelegate {
         let category: String = visitorCategory ?? ""
 
         if category.isEmpty {
-            self.tracker.identifiedVisitor.set(visitorId, visitorCategory: category)
-        } else {
             self.tracker.identifiedVisitor.set(visitorId)
+        } else {
+            self.tracker.identifiedVisitor.set(visitorId, visitorCategory: category)
         }
 
         resolve(true)
